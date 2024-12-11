@@ -38,3 +38,24 @@ DELETE FROM students WHERE name='Layal';
 
 #Problem 13:Commit ("Creating Table")
 
+#Problem 14:
+SELECT employees.Name, companies.Name, companies.Date 
+FROM employees 
+INNER JOIN companies 
+ON employees.Company=companies.Name;
+
+#Problem 15:
+SELECT employees.Name 
+FROM employees INNER JOIN companies 
+ON employees.Company=companies.Name 
+WHERE Date > 2000;
+
+#Problem 16:
+SELECT companies.Name 
+FROM employees INNER JOIN companies 
+ON employees.Company=companies.Name 
+WHERE employees.Role='Graphic Designer';
+
+# or SELECT Company FROM employees WHERE Role='Graphic Designer';
+
+#Problem 17:Commit("Joins")
