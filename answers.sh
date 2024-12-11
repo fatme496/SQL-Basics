@@ -1,18 +1,26 @@
+#Problem 1:
 SELECT * FROM students;
 
+#Problem 2:
 SELECT * FROM students WHERE Age > 30;
 
+#Problem 3:
 SELECT Name FROM students WHERE Gender='F' AND Age > 30;
 
+#Problem 4:
 SELECT Points FROM students WHERE Name='Alex';
 
+#Problem 5:
 INSERT INTO students VALUES (14,'Fatme','21','F','100');
 
-UPDATE students SET Points=((SELECT Points FROM students WHERE name='Basma')+20) WHERE name='Basma';
+#Problem 6:
+UPDATE students SET Points=(Points+20) WHERE name='Basma';
 
-UPDATE students
-SET Points=((SELECT Points FROM students WHERE Name='Alex')-10)
-WHERE name='Alex';
+#Problem 7:
+UPDATE students SET Points=(Points-10) WHERE name='Alex';
+
+#Problem 8:Update answers.sh
+#Problem 9:Commit ("Basic Queries")
 
 #Creating table graduates
 
@@ -59,3 +67,21 @@ WHERE employees.Role='Graphic Designer';
 # or SELECT Company FROM employees WHERE Role='Graphic Designer';
 
 #Problem 17:Commit("Joins")
+
+#Problem 18:
+SELECT * FROM students WHERE Points=(SELECT max(Points) FROM students);
+
+#Problem 19:
+SELECT avg(Points) FROM students;
+
+#Problem 20:
+SELECT count(*) FROM students WHERE Points=500;
+
+#Problem 21:
+SELECT name FROM students WHERE name like "%s%";
+
+#Problem 22:
+SELECT * FROM students ORDER by Points DESC;
+
+#Problem 23:Commit("Count & Filter")
+
